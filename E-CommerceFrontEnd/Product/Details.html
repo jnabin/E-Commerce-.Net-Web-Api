@@ -1,0 +1,834 @@
+﻿
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <style type="text/css">
+        a {
+            color: black;
+        }
+
+            a:link {
+                text-decoration: none;
+            }
+
+        .navfont {
+            font-size: 0.9rem;
+            display: none;
+        }
+
+        .wrapper {
+            display: none;
+        }
+
+        a:hover {
+            color: black;
+        }
+
+        @media only screen and (max-width: 805px) {
+            .hide {
+                display: none;
+            }
+
+            .wrapper {
+                display: block;
+            }
+
+            .navfont {
+                font-size: 0.9rem;
+                display: block;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+
+            <nav id="sidebar" style="overflow-y:scroll">
+                <div id="dismiss">
+                    <i class="fas fa-arrow-left"></i>
+
+                </div>
+                <div class="sidebar-header">
+                    <a href="#"><i class="fas fa-home fa-2x"></i></a>
+                </div>
+                <ul class="list-unstyled components">
+
+                </ul>
+                
+
+            </nav>
+
+        </div>
+        <div class="overlay"></div>
+
+
+        <nav class="navbar navbar-expand navfont1  mt-2 mb-2 navbar-light justify-content-between">
+            <div class="hide">
+                <ul class="navbar-nav">
+
+                    <li class="nav-item active">
+                        <a class="nav-link text-dark" href="../Home/manCategories.html">Men <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../Home/WomenCategories.html">Women</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../Home/lifestylesCategories.html">LifeStyles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="../Sale/ProductSale.html">SALE</a>
+                    </li>
+
+
+                </ul>
+            </div>
+            <div><a class="navbar-brand right ml-2 text-dark font-italic" href="../home"><b>JNFASHION&reg</b></a></div>
+            <div class="row">
+                <div class="col pl-1">
+                    <a class="mr-3 text-secondary cart" href="#"><i class="fa fa-shopping-bag fa-lg"></i></a>
+                    <a class="text-secondary profile" href="#"><i class="fa fa-user fa-lg"></i></a>
+                </div>
+            </div>
+
+        </nav>
+
+        <div class="profile-div mr-3">
+            <div class="HoverAbleDivProfile">
+                <div class="row p-2 ">
+                    <div class="col">
+                        <ul class="profileList">
+                           
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-div mr-3">
+            <div class="HoverAbleDivCart">
+                <div class="row p-2">
+                    <div class="col init">
+                        
+                            
+                        
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand navfont navbar-light bg-dark mt-2">
+            <div class="row">
+                <div class="col">
+                    <button type="button" id="sidebarCollapse" class="btn">
+                        <i class="fas fa-align-left"></i>
+                    </button>
+                </div>
+                <div class=" col  ml-5">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link text-light" href="../Home/manCategories.html/1">Men <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="../Home/WomenCategories.html">Women</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="../Home/lifestylesCategories.html">LifeStyles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" href="../Sale/ProductSale.html">SALE</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+       
+
+
+
+    
+        <hr />
+       
+        <div class="container ml-5 mt-4">
+            <div class="row">
+                <div class="col-8">
+                    <div class="container ml-0 ">
+                        <div class="row igmrow">
+                            
+                        </div>
+                    </div>
+                  
+                </div>
+                <div class="col-4 information">
+        
+                    <div class="name mt-3">
+                        
+                    </div>
+                    <div class="price mt-4">
+
+                    </div>
+                    <div class="description mt-4">
+                        
+                    </div>
+                    <div class="extraactivities mt-4">
+                        <button class="btn p-3 border-right border-dark"><i class="text-secondary far fa-envelope"></i></button>
+        
+                        <button class="btn p-3 border-right border-dark"><i class=" text-secondary far fa-heart"></i></button>
+        
+                    </div>
+                    <div class="sizediventry"></div>
+                   
+                </div>
+            </div>
+        </div>
+        <hr />
+        <br />
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-6 reviewbox">
+                   
+                </div>
+                <div class="col-3"></div>
+            </div>
+        </div>
+        <br />
+        <hr />
+        
+        <div id="ReviewModal" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header deleteHeader">
+        
+                    </div>
+                    <div class="modal-body deleteBody">
+        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            var product;
+        $.urlParam = function(name){
+            var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+            return results[1] || 0;
+        }
+        var id = $.urlParam('id');
+        $.ajax({
+            url : `http://localhost:49274/api/product/details/${id}`,
+            method: 'GET',
+            complete: function (xmlHttp, status) {
+                product = xmlHttp.responseJSON;
+                var data = xmlHttp.responseJSON;
+                var image = (data.ImageFile).split('|');
+                $.each(image, function(index, item){
+                    $(`.igmrow`).append(`
+                    <div class="col-sm-6 mt-2">
+                                    <img style="max-width:100%" src="../image/${item}" alt="product"/>
+                                </div>
+                    `);
+                });
+                $(".name").append(`<h3 class="font-weight-bold">${data.Product_name}</h3>`);
+                $(".price").append(`<h5 class="font-weight-bold">৳ ${data.UnitPrice}</h5>`);
+                $(".description").append(` <p class="text-secondary">${data.Description}</p>`);
+                
+                if(data.ProductSizes.length>0 && data.SizeCategory!= "other"){
+                    $(".sizediventry").append(`
+                    
+                    <form class="mt-4"  action="/Product/addcart" method="post">
+                            <input type="hidden" id="productid" name="productid" value=@Model.Product_id>
+                            <div class="form-group ">
+                                <label for="selectsize">Size<sub style="color:red">*</sub></label>
+                                <select class="form-control" id="selectsize" name="sizename">
+                                   
+                                </select>
+                            </div>
+                            <div class="ml-1 form-group">
+                                <button type="button" onclick="decrement()">-</button>
+                                <input type="number" id="demoInput" name="quantity" min=1 max=100 value="1" required>
+                                <button type="button" onclick="increment()">+</button>
+                                <button type="button" onclick="validateForm()" class="ml-3 mt-2 btn btn-primary mb-2" id="addto">Add To Cart</button>
+                            </div>
+                            <div class="ml-1" id="erroms"></div>
+                        </form>
+                    
+                    `);
+                    $.each(data.ProductSizes, function (index2, item2) {
+                        if(item2.Count>0){
+                            $("#selectsize").append(`
+                            <option value="${item2.ProductSizeID}|${item2.Count}">${item2.SizeName}</option>
+                        `);
+                        }
+                        
+                      });
+                   
+                   
+                }else if(data.SizeCategory == "other"){
+                    $(".sizediventry").append(`
+                    
+                    <form class="mt-4" action="/Product/addcart" method="post">
+                            <input type="hidden" id="productid" name="productid" value=${data.ProductId}>
+                            
+                            <div class="ml-1 form-group">
+                                <button type="button" onclick="decrement()">-</button>
+                                <input type="number" id="demoInput" name="quantity" min=1 max=100 value="1" required>
+                                <button type="button" onclick="increment()">+</button>
+                                <button type="button" onclick="validateForm()" class="ml-3 mt-2 btn btn-primary mb-2" id="addto">Add To Cart</button>
+                            </div>
+                            <div class="ml-1" id="erroms"></div>
+                        </form>
+                    
+                    `);
+                }else{
+                    $(".sizediventry").append(`
+                    <div class="mt-4 sizenotavailable">
+                            <p style="color:red">Size Not Available</p>
+                        </div>
+                    `);
+                }
+            
+            }
+        });
+       
+            function getCookie(name) {
+            // Split cookie string and get all individual name=value pairs in an array
+                var cookieArr = document.cookie.split(";");
+                
+                // Loop through the array elements
+                for(var i = 0; i < cookieArr.length; i++) {
+                    var cookiePair = cookieArr[i].split("=");
+                    
+                    /* Removing whitespace at the beginning of the cookie name
+                    and compare it with the given string */
+                    if(name == cookiePair[0].trim()) {
+                        // Decode the cookie value and return
+                        return decodeURIComponent(cookiePair[1]);
+                    }
+                }
+                
+                // Return null if not found
+                return null;
+            }
+
+        if(getCookie("userid") != null){
+           
+            $.ajax({
+            url : `http://localhost:49274/api/product/customerbuyornot`,
+            method: 'POST',
+            data: {
+                "cid":getCookie("userid"),
+                "pid" : id
+            },
+            complete: function (xmlHttp, status) {
+                if(xmlHttp.status == 200){
+                    $(".reviewbox").append(`
+                    <h4 class="mb-2 text-secondary">Give Review</h4>
+                        <form id="ajaxsubmit">
+                            <input type="hidden" name="ProductID" value="${id}" />
+                    <input type="hidden" name="CustomerID" value="${getCookie("userid")}" />
+                            <div class="form-group">
+                                <label for="ReviewTitle">REVIEW TITLE:</label>
+                                <input type="text" class="form-control" id="ReviewTitle" name="ReviewTitle">
+                                <div class="titlerr"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="ReviewText">RIVIEW TEXT</label>
+                                <textarea class="form-control" id="ReviewText" name="Description"></textarea>
+                                <div class="deserr"></div>
+                            </div>
+                            <button type="button" onclick="submitreview()" class="btn btn-primary">Submit</button>
+                        </form>
+                        <br />
+                        <h4 class="text-dark text-uppercase">existing reviews</h4>
+                        <div class="container exitingbox"></div>
+                    `);
+                    $.each((xmlHttp.responseJSON).Reviews, function(index, item4){
+                       
+                        $(".exitingbox").append(`
+                        <div class="container">
+                                        <p class="text-secondary text-uppercase">${item4.ReviewTitle}</p>
+                                    </div>
+        
+                                    <hr />
+                                    <div class="container">
+                                        <p class="text-secondary">${item4.Description}</p>
+                                    </div>
+                                    <div class="container">
+                                        <p class="text-secondary">Form: ${item4.Customer.CustomerName} | Date: ${item4.Date}</p>
+                                    </div>
+                                    <br />
+                        
+                        `);
+                    });
+                }else{
+                    $(".reviewbox").append(`
+                    <p class="mb-2" style="color:red">In Order to review you need to buy</p>
+                        <form >
+                           
+                            <div class="form-group">
+                                <label for="ReviewTitle">REVIEW TITLE:</label>
+                                <input type="text" class="form-control" id="ReviewTitle" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="ReviewText">RIVIEW TEXT</label>
+                                <textarea class="form-control" id="ReviewText" disabled></textarea>
+        
+                            </div>
+                            <button type="button" class="btn btn-primary">Submit</button>
+                        </form>
+                        <br />
+                        <h4 class="text-dark text-uppercase">existing reviews</h4>
+                        <div class="container exitingbox"></div>
+                    `);
+                    $.each(product.Reviews, function(index, item4){
+                       
+                        $(".exitingbox").append(`
+                        <div class="container">
+                                        <p class="text-secondary text-uppercase">${item4.ReviewTitle}</p>
+                                    </div>
+        
+                                    <hr />
+                                    <div class="container">
+                                        <p class="text-secondary">${item4.Description}</p>
+                                    </div>
+                                    <div class="container">
+                                        <p class="text-secondary">Form: ${item4.Customer.CustomerName} | Date: ${item4.Date}</p>
+                                    </div>
+                                    <br />
+                        
+                        `);
+                    });
+                }
+            }
+
+
+});
+        }else{
+            $(".reviewbox").append(`
+            
+            <p class="mb-2" style="color:red">Only registered users can write review</p>
+                        <form  onsubmit="return false">
+                            <div class="form-group">
+                                <label for="ReviewTitle">REVIEW TITLE:</label>
+                                <input type="text" class="form-control" id="ReviewTitle" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="ReviewText">RIVIEW TEXT</label>
+                                <textarea class="form-control" id="ReviewText" disabled></textarea>
+        
+                            </div>
+                            <button type="button" class="btn btn-primary">Submit</button>
+                        </form>
+            
+            `);
+        }
+        
+
+            function submitreview() {
+                if ($("#ReviewTitle").val().length == 0) {
+                    $(".titlerr").empty();
+                    $(".titlerr").append(`<p class="reviewerr" style="color:red">Title is required</p>`);
+                }else{
+                    $(".titlerr").empty();
+                }
+                if ($("#ReviewText").val().length == 0) {
+                    $(".deserr").empty();
+                    $(".deserr").append(`<p class="reviewerr" style="color:red">Review text is required</p>`);
+                }else{
+                    $(".deserr").empty();
+                }
+                if ($(".reviewerr").length <1){
+                    var title = $("#ReviewTitle").val();
+                    var desc = $("#ReviewText").val();
+                    var valdata = $("#ajaxsubmit").serialize();
+                    $.ajax({
+                        type: "POST",
+                        datatype: "json",
+                        url: 'http://localhost:49274/api/customer/addreview',
+                        data: valdata,
+                        success: function (response) {
+                            
+                            if (response == "success") {
+                                $(".exitingbox").append(`
+                        <div class="container">
+                                        <p class="text-secondary text-uppercase">${title}</p>
+                                    </div>
+        
+                                    <hr />
+                                    <div class="container">
+                                        <p class="text-secondary">${desc}</p>
+                                    </div>
+                                    <div class="container">
+                                        <p class="text-secondary">Form: ${getCookie("username")} | Date: today</p>
+                                    </div>
+                                    <br />
+                        
+                        `);
+                                var myModal = new bootstrap.Modal(document.getElementById('ReviewModal'));
+                                myModal.toggle();
+                                $(".modal-header").empty();
+                                $(".modal-body").empty();
+                                $(".modal-header").append(`<h5 class="modal-title">Success</h5><button type="button"  class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>`);
+                                $(".modal-body").append(`<p class="text-success">review submitted successfully</p>`);
+                                $(".modal-body").append(`<button type = "button" class="ml-2 btn btn-primary" data-dismiss="modal">Close </button >`);
+                                $("#ReviewTitle").val("");
+                                $("#ReviewText").val("");
+                            }
+                        }
+                    });
+                    return false;
+                }
+            }
+            $("#ReviewTitle").change(function () {
+                if ($("#ReviewTitle").val().length < 4 || $("#ReviewTitle").val().length > 20) {
+                    $(".titlerr").empty();
+                    $(".titlerr").append(`<p class="reviewerr" style="color:red">Title length should between 4 to 20</p>`);
+                } else {
+                    $(".titlerr").empty();
+                }
+            });
+            $("#ReviewText").change(function () {
+                if ($("#ReviewText").val().length < 15 || $("#ReviewText").val().length > 199) {
+                    $(".deserr").empty();
+                    $(".deserr").append(`<p class="reviewerr" style="color:red">Review text length should between 4 to 199</p>`);
+                } else {
+                    $(".deserr").empty();
+                }
+            });
+            function increment() {
+                $("#erroms").empty();
+                document.getElementById('demoInput').stepUp();
+            }
+            function decrement() {
+                $("#erroms").empty();
+                document.getElementById('demoInput').stepDown();
+            }
+            
+            $("#demoInput").change(function () {
+                if (Number($("#selectsize").val().split('|')[1]) < ($("#demoInput").val())) {
+                    $("#erroms").empty();
+                    $("#erroms").append(`<p style="color:red" id="counterror">Not Available.Available Quantity is ${$("#selectsize").val().split('|')[1]}</p>`);
+                } else {
+                    $("#erroms").empty();
+                }
+            });
+            function validateForm() {
+               
+                var value = Number($("#demoInput").val());
+        
+                if (Number($("#selectsize").val().split('|')[1]) < ($("#demoInput").val())) {
+                    $("#erroms").empty();
+                    $("#erroms").append(`<p style="color:red" id="counterror">Not Available.Available Quantity is ${$("#selectsize").val().split('|')[1]}</p>`);
+                } 
+                if ($("#counterror").length<1){
+                   
+                    $.ajax({
+                        url: 'http://localhost:49274/api/product/addcart',
+                        method : 'POST',
+                        data: {
+                            "productid": $("#productid").val(),
+
+                                "quantity": $("#demoInput").val(),
+
+                            "sizename": $("#selectsize").val()
+                        },
+                        complete : function(xmlHttp, status){
+                            if(xmlHttp.status == 200){
+                                window.location.href = "../Cart";
+                            }
+                        }
+                    });
+                }
+                
+            }
+        </script>
+
+
+
+    </main>
+    <footer>
+        <div class="container-fluid bg-dark p-3 my-2">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col text-center">
+                        <a class="p-4 text-white" href="#"><i class="fab fa-facebook-f fa-2x"></i></a>
+                        <a class="p-4 text-white" href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a class="p-4 text-white" href="#"><i class="fab fa-youtube fa-2x"></i></a>
+                        <a class="p-4 text-white" href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <form class="form-inline">
+                        <p class="ml-1 p-2 mb-1">Newsletter!</p>
+                        <div class="form-group mx-sm-3 mb-2">
+                            <input type="email" class="form-control" id="inputgmail2" placeholder="enter gmail">
+                        </div>
+                        <button type="submit" class="ml-2 btn btn-secondary mb-2">subscribe</button>
+                    </form>
+                    <br>
+                    <p class="text-secondary text-center">
+                        JNFashion LTD
+                        <br>
+                        H-90, Flat-6a, R-20, Block-B
+                        <br>
+                        Kuril, Dhaka
+                        <br>
+                        Customer Support:+8801798724156
+                        <br>
+                        Email:jnabin2@gmail.com
+                    </p>
+                </div>
+                <div class="col-md">
+                    <ul class="list-unstyled text-center border-left border-dark">
+                        <li>
+                            <a class="text-uppercase text-secondary" href="#">
+                                SHIPPING & EXCHANGE
+                                POLICY
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-uppercase text-secondary" href="#">PRIVACY POLICY</a>
+                        </li>
+                        <li>
+                            <a class="text-uppercase text-secondary" href="#">Terms and condition</a>
+                        </li>
+                        <li>
+                            <a class="text-uppercase text-secondary" href="#">About us</a>
+                        </li>
+                        <li>
+                            <a class="text-uppercase text-secondary" href="#">Login info</a>
+                        </li>
+                        <li>
+                            <a class="text-uppercase text-secondary" href="#">Size Guide</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md">
+                    <ul class="list-unstyled text-center border-left border-dark">
+                        <li>
+                            <a class="text-uppercase text-secondary" href="#">contact us</a>
+                        </li>
+                        <li class="text-secondary">
+                            helpline: 01798724156
+
+                        </li>
+
+                        <li>
+                            <a class="text-uppercase text-secondary" href="#">store location</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <p class="text-uppercase text-muted">copyright &copy; 2021 jnshop, all rights reserved. developed by team jn.</p>
+                </div>
+                <div class="col-md text-center">
+                    <ul class="list-unstyled folist">
+                        <li class="f1"><img style="height:40px" src="../image/i.png" alt="paying_system"></li>
+                        <li class="f1"><img style="height:40px" src="../image/i.png" alt="paying_system"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        $(document).ready(function () {
+            function getCookie(name) {
+            // Split cookie string and get all individual name=value pairs in an array
+                var cookieArr = document.cookie.split(";");
+                
+                // Loop through the array elements
+                for(var i = 0; i < cookieArr.length; i++) {
+                    var cookiePair = cookieArr[i].split("=");
+                    
+                    /* Removing whitespace at the beginning of the cookie name
+                    and compare it with the given string */
+                    if(name == cookiePair[0].trim()) {
+                        // Decode the cookie value and return
+                        return decodeURIComponent(cookiePair[1]);
+                    }
+                }
+                
+                // Return null if not found
+                return null;
+            }
+        
+            $.ajax({
+                url: 'http://localhost:49274/api/product/getcartitem',
+                method : 'Get',
+                complete: function(xmlHttp, status){
+                    if(xmlHttp.status == 200){
+                        var data = xmlHttp.responseJSON;
+                        
+                        var q=0;
+                        var cx = false;
+                        $.each(data, function(index, value){
+                            var subtotal = 0;
+                            q++;
+                            cx = true;
+                            var image = (value.product.ImageFile).split('|')[0];
+                            if(value.product.Sale != null){
+                                var p = Number(value.product.UnitPrice);
+                                var v = Number(Number(item.product.Sale.Amount)) / 100;
+                                var c = (p - (p * v));
+    
+                                subtotal += (Number(c) * Number(value.count));
+        
+                            }else{
+                                subtotal += (Number(value.product.UnitPrice) * value.count);
+                            }
+                            $(".init").append(`<div class="container mt-3 v1${q}">`+
+                                    `<div class="row items${q}">`+
+                                        `<div class="col-3 picture">`+
+                                           
+                                            `<img src="../image/${image}" alt="cartimage" style="max-width:100%"/>`+
+                                        `</div>`+
+                                        `<div class="col-9 information${q}">`+
+                                            `<div class="productname">`+
+                                                `<a class="font-weight-bold" href="../Product/Details?id=${value.product.ProductId}">${value.product.Product_name}</a>`+
+                                            `</div>`);
+                            if(value.size != null){
+                                $(`.information${q}`).append(`<div class="productsize">`+
+                                                    `<p class="text-secondary">Size:${value.size.SizeName}</p>`+
+                                                `</div>`);
+                            }
+                            $(`.information${q}`).append(`<div class="productprice${q}">`+
+                                                `<span class="p-2 border border-dark">${value.count}</span>`);
+                                                if(value.product.Sale != null){
+                                                    var p = Number(value.product.UnitPrice);
+                                                    var v = Number(item.product.Sale.Amount) / 100;
+                                                    var c = (p - (p * v));
+                                                    $(`.productprice${q}`).append(`<span class="ml-2"><s>৳ ${value.product.UnitPrice}</s> &nbsp; ৳ ${c}</span>`);
+                                                }else{
+                                                    $(`.productprice${q}`).append(`<span class="ml-2">৳ ${value.product.UnitPrice}</span>`);
+                                                }
+                                                $(`.information${q}`).append(`</div>`);
+                                                $(`.items${q}`).append(`</div>`);
+                                                $(`.v1${q}`).append(`</div>`);
+                                                $(".init").append(`</div></hr><div class="container mt-1">`+
+                                `<div class="row">`+
+                                    `<div class="col-8">`+
+                                        `<p>Subtotal:</p>`+
+                                    `</div>`+
+                                    `<div class="col-4">`+
+                                        `<p class="text-secondary">${subtotal} tk</p>`+
+                                    `</div>`+
+                                `</div>`+
+                            `</div>`);
+                        });
+                        if(cx){
+                            $(".init").append(`<div class="container m-2">`+
+                                `<a class="p-2 border border-dark bg-secondary text-light" href="../cart">Go To Cart</a>`+
+                            `</div>`)
+                        }
+                        if(!cx){
+                            $(".init").append(`<p class="text-danger">Nothing In Your Cart</p>`);
+                        }
+                        
+                    }
+                }
+            });
+
+            if(getCookie("username")!=null){
+                        
+                        $(".profileList").empty();
+                        $(".profileList").append(`<li><a href="../Customer/Index.html?id=${getCookie("userid")}">${getCookie("username")}</a></li>`);
+                        $(".profileList").append(`<li><a href="../Logout">Logout</a></li>`);
+                    }else{
+                       
+                        $(".profileList").empty();
+                        $(".profileList").append(`<li><a href="../Registration">Registration</a></li>`);
+                        $(".profileList").append(`<li><a href="../Login">Login</a></li>`);
+                    }
+
+            $.ajax({
+                url: 'http://localhost:49274/api/Category/NavBar',
+                method: 'GET',
+                complete: function (xmlHttp, response, status) {
+                    if (xmlHttp.status == 200) {
+                        var str = '';
+                        var data=xmlHttp.responseJSON;
+                        
+                        for (var i = 0; i < data.length; i++) {
+                            
+                            if(data[i].SubCatetories.length == 0){
+                                $(".components").append(`<li>`+
+                        `<a href="/home/getProducts/${data[i].Category_id}/1">${data[i].Category_name}</a>`+
+                    `</li>`);
+                            }else{
+                                $(".components").append(`<li class="active">`+
+                    `<a href="#homeSubmenu ${data[i].Category_id}" data-toggle="collapse" aria-expanded="false">${data[i].Category_name}</a>`+
+                
+                    `<ul class="collapse list-unstyled" id="homeSubmenu ${data[i].Category_id}">`);
+                        for(var j=0; j<data[i].SubCatetories.length; j++){
+                            if(data[i].SubCatetories[j].FinalSubCategories.length == 0){
+                                $(".components").append(`<li>`+
+                        `<a href="/home/getProducts/${data[i].SubCatetories[j].SubCategoryId}/1">${data[i].SubCatetories[j].SubCategory_name}</a>`+
+                    `</li>`);
+                            }else{
+                                $(".components").append(`<li>`+
+                                    `<a href="#NEWSubmenu ${data[i].SubCatetories[j].SubCategoryId}" data-toggle="collapse" aria-expanded="false">${data[i].SubCatetories[j].SubCategory_name}</a>`+
+                                    `<ul class="ml-4 collapse list-unstyled" id="NEWSubmenu ${data[i].SubCatetories[j].SubCategoryId}">`);
+                                for(var k=0; k<data[i].SubCatetories[j].FinalSubCategories.length; k++){
+                                    $(".components").append(`<li>`+
+                                                `<a href="/home/getProducts/${data[i].SubCatetories[j].FinalSubCategories[k].FinalSubCategoryId}/3">${data[i].SubCatetories[j].FinalSubCategories[k].FinalSubCate_name}</a>`+
+                                            `</li>`);
+                                }
+                                $(".components").append(`</ul>`);
+                                $(".components").append(`</li>`);
+                            }
+                        }
+                        $(".components").append(`</ul>`);
+                        $(".components").append(`</li>`);
+                            }
+                        }
+                       
+                    }
+                    else {
+                        $("#msg").html(xmlHttp.status + ":" + xmlHttp.statusText);
+                    }
+                }
+            });
+        });
+    </script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
+
